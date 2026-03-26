@@ -1,0 +1,28 @@
+Hardware Wiring Guide
+
+#### 1. Radio Module (nRF24L01 + PA + LNA)
+| Pin Name | ESP32 GPIO  | Role              |
+| **VCC**  | **3.3V**    | Power (NOT 5V)    |
+| **GND**  | **GND**     | Ground            |
+| **CE**   | **GPIO 17** | Chip Enable       |
+| **CSN**  | **GPIO 16** | SPI Select        |
+| **SCK**  | **GPIO 18** | SPI Clock         |
+| **MISO** | **GPIO 19** | SPI Master In     |
+| **MOSI** | **GPIO 23** | SPI Master Out    |
+
+---
+
+#### 2. Display Module (OLED I2C)
+| Pin Name | ESP32 GPIO    | Role      |
+| **VCC**  | **3.3V / 5V** | Power     |
+| **GND**  | **GND**       | Ground    |
+| **SCL**  | **GPIO 22**   | I2C Clock |
+| **SDA**  | **GPIO 21**   | I2C Data  |
+
+---
+
+#### 3. Control & Indicators (Buttons & LED)
+| Component     | ESP32 GPIO  | Config          |
+| **Next BTN**  | **GPIO 4**  | Input (Pull-up) |
+| **Select BTN**| **GPIO 5**  | Input (Pull-up) |
+| **Status LED**| **GPIO 15** | Output (PWM)    |
